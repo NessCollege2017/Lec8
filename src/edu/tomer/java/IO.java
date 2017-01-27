@@ -12,20 +12,40 @@ public class IO {
      * @param arr an integer array that we want to print
      */
     static void print(int[] arr){
-        //System.out.print("[");
         for (int i = 0; i < arr.length; i++) {
             System.out.printf("%4d", arr[i]);
         }
-        //System.out.print("]");
         System.out.println();
     }
     static void print(int[][] arr){
         for (int i = 0; i < arr.length; i++) {
-//            for (int j = 0; j < arr[i].length; j++) {
-//                System.out.printf("%4d", arr[i][j]);
-//            }
-//            System.out.println();
             print(arr[i]);
+        }
+    }
+
+    static void print(String[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            System.out.printf("%4s", arr[i]);
+        }
+        System.out.println();
+    }
+    static void print(String[][] arr){
+        for (int i = 0; i < arr.length; i++) {
+            print(arr[i]);
+        }
+    }
+
+    static void printBoard(String[] arr){
+        System.out.printf("|");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.printf("%4s|", arr[i]);
+        }
+        System.out.printf("\n________________\n");
+    }
+    static void printBoard(String[][] arr){
+        System.out.printf("\n________________\n");
+        for (int i = 0; i < arr.length; i++) {
+            printBoard(arr[i]);
         }
     }
 
@@ -50,5 +70,27 @@ public class IO {
             result[i] = getInt(prompt);
         }
         return result;
+    }
+
+    static int getInt(String prompt, int from, int to){
+//        boolean isValid = false;
+//        int result = 0;
+//        while(!isValid){
+//             result = getInt(prompt);
+//             if (result >= from && result <= to){
+//                 isValid = true;
+//             }
+//        }
+//
+//        return result;
+
+        int result;
+
+        do {
+            result = getInt(prompt);
+        }while (result < from || result > to);
+
+        return result;
+
     }
 }

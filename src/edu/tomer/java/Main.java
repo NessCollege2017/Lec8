@@ -6,10 +6,17 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int[][] arr = {{1, 3, 5, 6},
-                      {4, 5, 6, 7}};
+        String[][] board = {{"", "", ""}, {"", "", ""}, {"", "", ""}};
+        IO.printBoard(board);
 
-        IO.print(arr);
+        String turn = "X";//IO.getString("Pick turn: O or X");
+
+        int[] pos = TicTacToe.getPositionInBoard(board);
+        int row = pos[0];
+        int column = pos[1];
+
+
+
     }
 
 
