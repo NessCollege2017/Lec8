@@ -5,7 +5,7 @@ package edu.tomer.java;
 
 import java.util.Scanner;
 
-public c ass IO {
+public class IO {
     static Scanner scan = new Scanner(System.in);
     /**
      * This method prints an array of integers
