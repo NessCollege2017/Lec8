@@ -1,6 +1,8 @@
 package edu.tomer.java;
 
 
+
+
 import java.util.Scanner;
 
 public class IO {
@@ -10,12 +12,21 @@ public class IO {
      * @param arr an integer array that we want to print
      */
     static void print(int[] arr){
-        System.out.print("[");
+        //System.out.print("[");
         for (int i = 0; i < arr.length; i++) {
-            System.out.printf("%3d", arr[i]);
+            System.out.printf("%4d", arr[i]);
         }
-        System.out.print("]");
+        //System.out.print("]");
         System.out.println();
+    }
+    static void print(int[][] arr){
+        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                System.out.printf("%4d", arr[i][j]);
+//            }
+//            System.out.println();
+            print(arr[i]);
+        }
     }
 
     static int getInt(String prompt){
